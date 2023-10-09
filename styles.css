@@ -1,36 +1,12 @@
-@font-face {
-    font-family: 'Highway Gothic';
-    src: url('https://assets.website-files.com/594bf24620923a5a84fc2c8f/5fa459c2033e749e697ac835_Highway%20Gothic.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Highway Gothic Condensed';
-    src: url('https://assets.website-files.com/594bf24620923a5a84fc2c8f/5fa459c22173342bb130c9c3_Highway%20Gothic%20Condensed.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Circular';
-    src: url('https://assets.website-files.com/594bf24620923a5a84fc2c8f/5d1173d5d12a1e4f29ebdf7c_CircularStd-Book.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Circular';
-    src: url('https://assets.website-files.com/594bf24620923a5a84fc2c8f/5d1173d589e2710693068ea7_CircularStd-Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
+@import url(slider.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Rubik:wght@400;700&display=swap');
 
   @font-face {
     font-family: 'Aqum';
     src: 'fonts/aqum.ttf';
   }
+
   
   :root {
     --action: #F289A8;
@@ -38,7 +14,6 @@
     --bg2: #fbfcfb;
     --dark: #2c2e38;
     --indent: 17%;
-
   }
 
   body {
@@ -46,11 +21,16 @@
       min-height: 100%;
       background-color: #fff;
       position: relative;
-      font-family: Circular,sans-serif;
+      font-family: Rubik, Noto Sans JP, sans-serif;
       color: var(--dark);
       font-size: 18px;
       line-height: 160%;
       font-weight: 400;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin: 0;
   }
 
   .header-hero {
@@ -93,8 +73,9 @@
  .language {
   padding-right: var(--indent);
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   text-decoration: none;
+  font-weight: 700;
  }
 
   .hero-content {
@@ -165,14 +146,15 @@
   }
   
  .events {
-    height: 30vh;
+    height: 60vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--bg2);
  }
-
- section.footer{
+ 
+section.footer{
     padding-top: 75px;
     padding-bottom: 75px;
     border-top: 1px rgba(21,23,26,.2);
