@@ -63,7 +63,8 @@
     flex-direction: column;
 }
 
-.nav {
+.navbar {
+    z-index: 20;
     position: fixed;
     display: flex;
     width: 100%;
@@ -71,6 +72,7 @@
 }
 
   .logo {
+    z-index: 30;
       padding:32px 0px;
       padding-left: var(--left-align);
       display: flex;
@@ -78,6 +80,7 @@
   }
 
   .logo-text {
+    z-index: 30;
     padding-left: 10px;
     font-size: 30px;
     font-weight: 300;
@@ -196,13 +199,7 @@
       }
   }
   @media screen and (min-width:1200px){
-      .col-xl-7.c-width-58{
-          width:58%;	
-      }
-      .col-xl-5.c-width-37{
-          width:36.3%;
-          padding:0px;
-      }
+
   }
   @media screen and (max-width: 991px){
       section.content{
