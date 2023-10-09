@@ -37,7 +37,7 @@
     --bg1: #fff;
     --bg2: #fbfcfb;
     --dark: #2c2e38;
-    --left-align: 17%;
+    --indent: 17%;
 
   }
 
@@ -67,14 +67,16 @@
     z-index: 20;
     position: fixed;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 15%;
 }
 
   .logo {
     z-index: 30;
-      padding:32px 0px;
-      padding-left: var(--left-align);
+      padding-left: var(--indent);
       display: flex;
       align-items: center;
   }
@@ -87,6 +89,14 @@
     color: #fff;
     font-family: Aqum;
 }
+
+ .language {
+  padding-right: var(--indent);
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+ }
+
   .hero-content {
     z-index: 10;
     display: flex;
@@ -100,7 +110,7 @@
   }
 
   .hero-container {
-    padding-left: var(--left-align);
+    padding-left: var(--indent);
   }
 
   .hero-text {
