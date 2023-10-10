@@ -10,7 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="styles.css" rel="stylesheet">
+        <link href="styles/styles.css" rel="stylesheet">
     </head>
     <body>
         <!-- Header Hero Section-->
@@ -39,64 +39,97 @@
         <!-- Content Section-->
         <main>
             <section id="next-section" class="content">
-                <h1>
-                    <strong>What is UTJA?</strong>
-                </h1>
-                <div class="content-text">
                     <div class="about-content">
                         <img class="about-image" src="images/UTJA_Fukuoka.jpg" alt="UTJA image">
-                        <div>
-                            <h2>Your Passport to Japanese Culture & Language</h2>
-                            <li>
-                                <ul>
-                                    Weekly Language Exchanges
-                                </ul>
-                                <ul>
-                                    Other Events
-                                </ul>
-                            </li>
+                        <div class="about-text">
+                            <h1 class="about-h">Experience Japanese culture and forge lasting connections with UTJA.</h1>
                             <p>
-                                The University of Toronto Japan Association is a vibrant club fostering cultural exchange and language learning through weekly language exchange sessions, as well as organizing a variety of engaging events to enrich the University of Toronto community's understanding and appreciation of Japanese culture.
+                                The University of Toronto Japan Association is a vibrant club fostering cultural exchange and language learning through a variety of engaging events. Our weekly exchanges, held every Friday from 17:00 to 19:00, are your gateway to immerse in the beauty of Japanese language and culture.
                             </p>
+                            <div class="about-sign-up">
+                                <a class="action-button" href="/">Sign Up</a>
+                                Join our next language exchange!
+                            </div>
                         </div>
-                        
                     </div>
-                </div>
             </section>
             <section class="events">
-                <h1>Events</h1>
-                <div class="csslider">
-                  <input type="radio" name="slides" id="slides_1" checked />
-                  <input type="radio" name="slides" id="slides_2" />
-                  <input type="radio" name="slides" id="slides_3" />
-                  <input type="radio" name="slides" id="slides_4" />
-                  <input type="radio" name="slides" id="slides_5" />
-                  <ul>
-                      <li>
-                        <img src="images/events/halloween.png" height="300px">
-                      </li>
-                      <li>
-                        <img src="images/events/hal2.png" height="300px">
-                      </li>
-                      <li><img src="images/events/halloween.png" height="300px"></li>
-                      <li><img src="images/events/hal2.png" height="300px"></li>
-                      <li><img src="images/events/hal2.png" height="300px"></li>
-                  </ul>
-                  <div class="arrows">
-                      <label for="slides_1"></label>
-                      <label for="slides_2"></label>
-                      <label for="slides_3"></label>
-                      <label for="slides_4"></label>
-                      <label for="slides_5"></label>
-                  </div>
-                  <div class="navigation">
-                      <div>
-                          <label for="slides_1"></label>
-                          <label for="slides_2"></label>
-                          <label for="slides_3"></label>
-                          <label for="slides_4"></label>
-                          <label for="slides_5"></label>
-                      </div>
+                <h1>Our Events</h1>
+                <div class="slider">
+
+                    <input type="radio" name="slider" class="d-none" id="s1" checked>
+                    <input type="radio" name="slider" class="d-none" id="s2">
+                    <input type="radio" name="slider" class="d-none" id="s3">
+                    <input type="radio" name="slider" class="d-none" id="s4">
+                    <input type="radio" name="slider" class="d-none" id="s5">
+                
+                    <div class="cards">
+                      <label for="s1" id="slide1">
+                        <div class="card">
+                          <div class="image">
+                            <img src="images/events/halloween.png" alt="">
+                          </div>
+                          <div class="infos">
+                            <span class="name">Halloween</span>
+                            <span class="lorem">Upcoming halloween event on Oct. 28! Entry will 20$ early bird and 25$ regular.
+                              </span>
+                          </div>
+                        </div>
+                      </label>
+                
+                      <label for="s2" id="slide2">
+                        <div class="card">
+                            <div class="image">
+                              <img src="images/events/halloween.png" alt="">
+                            </div>
+                            <div class="infos">
+                              <span class="name">Halloween</span>
+                              <span class="lorem">Upcoming halloween event on Oct. 28! Entry will 20$ early bird and 25$ regular.
+                                </span>
+                            </div>
+                          </div>
+                      </label>
+                
+                      <label for="s3" id="slide3">
+                        <div class="card">
+                            <div class="image">
+                              <img src="images/events/halloween.png" alt="">
+                            </div>
+                            <div class="infos">
+                              <span class="name">Halloween</span>
+                              <span class="lorem">Upcoming halloween event on Oct. 28! Entry will 20$ early bird and 25$ regular.
+                                </span>
+                            </div>
+                          </div>
+                      </label>
+                
+                      <label for="s4" id="slide4">
+                        <div class="card">
+                            <div class="image">
+                              <img src="images/events/halloween.png" alt="">
+                            </div>
+                            <div class="infos">
+                              <span class="name">Halloween</span>
+                              <span class="lorem">Upcoming halloween event on Oct. 28! Entry will 20$ early bird and 25$ regular.
+                                </span>
+                            </div>
+                          </div>
+                      </label>
+                
+                      <label for="s5" id="slide5">
+                        <div class="card">
+                            <div class="image">
+                              <img src="images/events/halloween.png" alt="">
+                            </div>
+                            <div class="infos">
+                              <span class="name">Halloween</span>
+                              <span class="lorem">Upcoming halloween event on Oct. 28! Entry will 20$ early bird and 25$ regular.
+                                </span>
+                            </div>
+                          </div>
+                      </label>
+                    </div>
+                
                   </div>
               </div>
             </section>

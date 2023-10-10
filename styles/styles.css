@@ -1,4 +1,4 @@
-@import url(slider.css);
+@import url(carousel.css);
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Rubik:wght@400;700&display=swap');
 
@@ -12,7 +12,9 @@
     --bg1: #fff;
     --bg2: #fbfcfb;
     --dark: #000000;
-    --indent: 15rem;
+    --indent: 16rem;
+    --mid-gut: 8rem;
+    --cont-size: 50%;
 }
 
 body {
@@ -32,7 +34,7 @@ h1 {
 }
 
 .header-hero {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/hero_background.jpg);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/hero_background.jpg);
     background-position: center center;
     background-size: auto, cover;
     text-align: left;
@@ -45,7 +47,6 @@ header {
     z-index: 20;
     position: fixed;
     display: flex;
-
     width: 100%;
     height: 4rem;
     transition: background-color 0.15s ease-in-out, border-bottom 0.15s ease-in-out;
@@ -116,7 +117,7 @@ nav {
 }
 
 .hero-container {
-    width: 50%;
+    width: var(--cont-size);
     height: 60%;
     display: flex;
     flex-direction: column;
@@ -168,37 +169,67 @@ section.content {
     padding: 0 var(--indent) 0 var(--indent);
 }
 
-.content-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 60%;
-}
-
 .about-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    width: 100%;
+    height: 80%;
 }
 
 .about-image {
-    height: 100%;
+    height: 70%;
+    border-radius: 20px;
+}
+
+.about-text {
+    margin-left: var(--mid-gut);
+    height: 70%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.about-h {
+    line-height: 2.5rem;
+    margin: 0;
+}
+
+.about-sign-up {
+    font-size: 1rem;
+}
+
+.action-button {
+    display: inline-block;
     width: fit-content;
+    padding: 10px 20px;
+    background-color: var(--action);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #b1647c;
 }
 
 section.content p {
     margin-bottom: 0;
     font-size: 1.25rem;
     text-align: left;
-    width: 50%;
     font-size: 1.25rem;
     line-height: 1.75rem;
 }
 
 .events {
-    height: 60vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -240,53 +271,60 @@ section.footer {
     opacity: 1;
 }
 
-@media screen and (min-width: 87.5rem) {
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl,
-    .container-xxl {
-        max-width: 79rem; /* 1264px converted to rem */
+@media (min-width: 1920px) {
+    /* CSS styles for large laptops and desktops */
+    :root{
+        --indent: 16rem;
+        --mid-gut: 8rem;
+        --cont-size: 45rem;
     }
-}
+  }  
 
-@media screen and (min-width: 75rem) {
-    /* Add styles for min-width 1200px if needed */
-}
-
-@media screen and (max-width: 61.9375rem) {
-    section.content {
-        top: 0 !important;
-        margin: 0 0 1.875rem 0 !important; /* 30px converted to rem */
+  @media (min-width: 1200px) and (max-width: 1919px) {
+    /* CSS styles for regular laptops and desktops */
+    :root{
+        --indent: 8rem;
+        --mid-gut: 4rem;
+        --cont-size: 45rem;
     }
-}
+  }
 
-@media screen and (max-width: 47.9375rem) {
-    .logo {
-        padding: 1.125rem 0;
+  @media (min-width: 992px) and (max-width: 1199px) {
+    /* CSS styles for small laptops and desktops */
+    :root{
+        --indent: 8rem;
+        --mid-gut: 4rem;
+        --cont-size: 45rem;
     }
+  }
 
-    .logo img {
-        height: 1.625rem; /* 26px converted to rem */
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* CSS styles for tablets */
+    :root{
+        --indent: 4rem;
+        --cont-size: 45rem;
+        --mid-gut: 2rem;
+
     }
+  }
 
-    .hero-content {
-        padding-top: 6.25rem; /* 100px converted to rem */
-        padding-bottom: 2.5rem; /* 40px converted to rem */
+  @media (min-width: 576px) and (max-width: 767px) {
+    /* CSS styles for mobile phones in landscape mode */
+    :root{
+        --indent: 2rem;
+        --cont-size: 34rem;
+        --mid-gut: 1rem;
+
     }
+  }
+  
+  @media (max-width: 575px) {
+    /* CSS styles for mobile phones in portrait mode */
+    :root{
+        --indent: 0;
+        --cont-size: 100%;
+        --mid-gut: 0rem;
 
-    .hero-title-1 {
-        margin: 1.875rem 0 0.625rem; /* 30px and 10px converted to rem */
-        font-size: 2.5rem; /* 40px converted to rem */
-    }
-
-    section.content {
-        padding-top: 1.25rem; /* 20px converted to rem */
-    }
-
-    section.content h2 {
-        font-size: 1.5625rem; /* 25px converted to rem */
     }
 
     .cta-button {
@@ -296,4 +334,4 @@ section.footer {
     .footer-nav li {
         display: block;
     }
-}
+  }
