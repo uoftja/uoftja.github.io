@@ -15,6 +15,14 @@
     --indent: 16rem;
     --mid-gut: 8rem;
     --cont-size: 50%;
+
+    --s0: 1rem;
+    --s1: 1.414rem;
+    --s2: 2.625rem;
+    --s3: 4.25rem;
+    --s4: 6.875rem;
+    --s6: 11.063rem;
+    --s7: 17.983rem;
 }
 
 body {
@@ -24,13 +32,13 @@ body {
     position: relative;
     font-family: Rubik, Noto Sans JP, sans-serif;
     color: var(--dark);
-    font-size: 1rem;
+    font-size: var(--s0);
     line-height: 160%;
     font-weight: 400;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: var(--s3);
 }
 
 .header-hero {
@@ -87,7 +95,7 @@ nav {
     flex-direction: row;
     align-items: center;
     color: white;
-    font-size: 1rem;
+    font-size: var(--s0);
     text-decoration: none;
     font-weight: 400;
     transition: background-color 0.2s ease;
@@ -101,7 +109,7 @@ nav {
 }
 
 .globe{
-    height: 1.25rem;
+    height: 1.414rem;
 }
 
 .hero-content {
@@ -126,7 +134,7 @@ nav {
 
 .hero-title-1 {
     margin: 0 0 0 0;
-    font-size: 3.5rem;
+    font-size: var(--s3);
     line-height: 1.2;
     font-weight: 700;
     color: #fff;
@@ -139,7 +147,7 @@ nav {
 
 .hero-description {
     color: #fff;
-    font-size: 1.25rem;
+    font-size: var(--s1);
     line-height: 160%;
     margin: 0;
 }
@@ -148,6 +156,7 @@ nav {
     display: inline-block;
     width: fit-content;
     padding: 10px 20px;
+    font-size: var(--s0);
     background-color: var(--action); /* Change to your desired button color */
     color: #fff;
     border: none;
@@ -179,26 +188,32 @@ section.content {
 
 .about-image {
     height: 70%;
+    width: 70%;
     border-radius: 20px;
 }
 
 .about-text {
     margin-left: var(--mid-gut);
     height: 70%;
-    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    list-style: none;
 }
 
 .about-h {
-    line-height: 2.5rem;
+    font-size: var(--s2);
+    line-height: var(--s2);
     margin: 0;
 }
 
+.about-p {
+    margin-bottom: 0;
+    font-size: var(--s1);
+    line-height: 1.75rem;
+}
+
 .about-sign-up {
-    font-size: 1rem;
+    font-size: var(--s0);
 }
 
 .action-button {
@@ -218,14 +233,6 @@ section.content {
 
 .action-button:hover {
     background-color: #b1647c;
-}
-
-section.content p {
-    margin-bottom: 0;
-    font-size: 1.25rem;
-    text-align: left;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
 }
 
 .events {
@@ -277,6 +284,14 @@ section.footer {
         --indent: 16rem;
         --mid-gut: 8rem;
         --cont-size: 45rem;
+        
+        --s0: 1rem;
+        --s1: 1.414rem;
+        --s2: 2.625rem;
+        --s3: 4.25rem;
+        --s4: 6.875rem;
+        --s6: 11.063rem;
+        --s7: 17.983rem;
     }
   }  
 
@@ -286,24 +301,48 @@ section.footer {
         --indent: 8rem;
         --mid-gut: 4rem;
         --cont-size: 45rem;
+
+        --s0: 1rem;
+        --s1: 1.414rem;
+        --s2: 2.625rem;
+        --s3: 4.25rem;
+        --s4: 6.875rem;
+        --s6: 11.063rem;
+        --s7: 17.983rem;
     }
   }
 
   @media (min-width: 992px) and (max-width: 1199px) {
     /* CSS styles for small laptops and desktops */
     :root{
-        --indent: 8rem;
-        --mid-gut: 4rem;
+        --indent: 4rem;
+        --mid-gut: 2rem;
         --cont-size: 45rem;
+
+        --s0: 1rem;
+        --s1: 1.414rem;
+        --s2: 2.625rem;
+        --s3: 4.25rem;
+        --s4: 6.875rem;
+        --s6: 11.063rem;
+        --s7: 17.983rem;
     }
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
     /* CSS styles for tablets */
     :root{
-        --indent: 4rem;
+        --indent: 2rem;
         --cont-size: 45rem;
-        --mid-gut: 2rem;
+        --mid-gut: 1rem;
+
+        --s0: 1rem;
+        --s1: 1rem;
+        --s2: 1.414rem;
+        --s3: 2.625rem;
+        --s4: 4.25rem;
+        --s6: 6.875rem;
+        --s7: 11.063rem;
 
     }
   }
@@ -315,6 +354,14 @@ section.footer {
         --cont-size: 34rem;
         --mid-gut: 1rem;
 
+        --s0: 1rem;
+        --s1: 1rem;
+        --s2: 1.414rem;
+        --s3: 2.625rem;
+        --s4: 4.25rem;
+        --s6: 6.875rem;
+        --s7: 11.063rem;
+
     }
   }
   
@@ -324,6 +371,14 @@ section.footer {
         --indent: 0;
         --cont-size: 100%;
         --mid-gut: 0rem;
+
+        --s0: 1rem;
+        --s1: 1rem;
+        --s2: 1.414rem;
+        --s3: 2.625rem;
+        --s4: 4.25rem;
+        --s6: 6.875rem;
+        --s7: 11.063rem;
 
     }
 
