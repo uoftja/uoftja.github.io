@@ -14,26 +14,24 @@
     </head>
     <body>
         <!-- Header Hero Section-->
+        <header class="navbar">
+          <nav>
+          <div class="logo">
+                  <img src="images/logo.png" alt="UTJA" height="40px">
+                  <span class="logo-text">UTJA</span>
+          </div>
+          <a href="./jp" class="language">
+              <img class="globe" src="images/navbar_icons/globe.png" alt="globe">
+              <p>日本語</p>
+          </a>
+          </nav>
+        </header>
         <section class="header-hero">
-            <header class="navbar">
-                <nav>
-                <div class="logo">
-                        <img src="images/logo.png" alt="UTJA" height="45px">
-                        <span class="logo-text">UTJA</span>
-                </div>
-                <a href="./jp" class="language">
-                    <img class="globe" src="images/navbar_icons/globe.png" alt="globe">
-                    日本語
-                </a>
-                </nav>
-            </header>
-            <div class="hero-content">
-                <div class="hero-container">
-                    <h1 class="hero-title-1">University of Toronto <span class="hero-title-2">Japan Association</span></h1>
-                    <p class="hero-description">Unlock the world of Japanese language and culture through engaging language exchanges and exciting events for all language enthusiasts.</p>
-                    <a href="#next-section" class="learn-more-button">Learn More</a>
-                </div>
-            </div>
+          <div class="hero-container">
+            <h2 class="hero-title-1">University of Toronto <span class="hero-title-2">Japan Association</span></h2>
+            <h5 class="hero-description">Unlock the world of Japanese language and culture through engaging language exchanges and exciting events for all language enthusiasts.</h5>
+            <a href="#next-section" class="learn-more-button">Learn More</a>
+          </div>
         </section>
         <!-- End Header Hero Section-->
         <!-- Content Section-->
@@ -42,99 +40,32 @@
                     <div class="about-content">
                         <img class="about-image" src="images/UTJA_Fukuoka.jpg" alt="UTJA image">
                         <div class="about-text">
-                            <h1 class="about-h">Experience Japanese culture and forge lasting connections with UTJA.</h1>
-                            <p class="about-p">
+                            <h3 class="about-h">Experience Japanese culture and forge lasting connections with UTJA.</h3>
+                            <h5 class="about-p">
                                 The University of Toronto Japan Association is a vibrant club fostering cultural exchange and language learning through a variety of engaging events. Our weekly exchanges, held every Friday from 17:00 to 19:00, are your gateway to immerse in the beauty of Japanese language and culture.
-                            </p>
+                            </h5>
                             <div class="about-sign-up">
                                 <a class="action-button" href="/">Sign Up</a>
-                                Join our next language exchange!
+                                <p>Join our next language exchange!</p>
                             </div>
                         </div>
                     </div>
             </section>
             <section class="events">
-                <h1>Our Events</h1>
-                <div class="slider">
-
-                    <input type="radio" name="slider" class="d-none" id="s1" checked>
-                    <input type="radio" name="slider" class="d-none" id="s2">
-                    <input type="radio" name="slider" class="d-none" id="s3">
-                    <input type="radio" name="slider" class="d-none" id="s4">
-                    <input type="radio" name="slider" class="d-none" id="s5">
-                
-                    <div class="cards">
-                      <label for="s1" id="slide1">
-                        <div class="card">
-                          <div class="image">
-                            <img src="images/events/halloween.png" alt="">
-                          </div>
-                          <div class="infos">
-                            <span class="name">Halloween</span>
-                            <span class="lorem">Upcoming halloween event on Oct. 28! Entry will 20$ early bird and 25$ regular.
-                              </span>
-                          </div>
-                        </div>
-                      </label>
-                
-                      <label for="s2" id="slide2">
-                        <div class="card">
-                            <div class="image">
-                              <img src="images/events/halloween.png" alt="">
-                            </div>
-                            <div class="infos">
-                              <span class="name">Halloween</span>
-                              <span class="lorem">Upcoming halloween event on Oct. 28! Entry will 20$ early bird and 25$ regular.
-                                </span>
-                            </div>
-                          </div>
-                      </label>
-                
-                      <label for="s3" id="slide3">
-                        <div class="card">
-                            <div class="image">
-                              <img src="images/events/halloween.png" alt="">
-                            </div>
-                            <div class="infos">
-                              <span class="name">Halloween</span>
-                              <span class="lorem">Upcoming halloween event on Oct. 28! Entry will 20$ early bird and 25$ regular.
-                                </span>
-                            </div>
-                          </div>
-                      </label>
-                
-                      <label for="s4" id="slide4">
-                        <div class="card">
-                            <div class="image">
-                              <img src="images/events/halloween.png" alt="">
-                            </div>
-                            <div class="infos">
-                              <span class="name">Halloween</span>
-                              <span class="lorem">Upcoming halloween event on Oct. 28! Entry will 20$ early bird and 25$ regular.
-                                </span>
-                            </div>
-                          </div>
-                      </label>
-                
-                      <label for="s5" id="slide5">
-                        <div class="card">
-                            <div class="image">
-                              <img src="images/events/halloween.png" alt="">
-                            </div>
-                            <div class="infos">
-                              <span class="name">Halloween</span>
-                              <span class="lorem">Upcoming halloween event on Oct. 28! Entry will 20$ early bird and 25$ regular.
-                                </span>
-                            </div>
-                          </div>
-                      </label>
-                    </div>
-                
-                  </div>
+              <h3>Our Events</h3>
+              <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <div class="carousel">
+                  <img src="images/events/halloween.png" alt="img" draggable="false">
+                  <img src="images/events/FukuokaEvent.png" alt="img" draggable="false">
+                  <img src="images/events/LE4.png" alt="img" draggable="false">
+                  <img src="images/events/LE3.png" alt="img" draggable="false">
+                  <img src="images/events/LE2.png" alt="img" draggable="false">
+                  <img src="images/events/LE1.png" alt="img" draggable="false">
+                </div>
+                <i id="right" class="fa-solid fa-angle-right"></i>
               </div>
             </section>
-            
-            
         </main>
         <!-- End Content Section-->
         <!-- Footer -->

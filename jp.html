@@ -7,43 +7,64 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, nofollow">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="styles.css" rel="stylesheet">
+        <link href="styles/styles.css" rel="stylesheet">
     </head>
     <body>
         <!-- Header Hero Section-->
+        <header class="navbar">
+          <nav>
+          <div class="logo">
+                  <img src="images/logo.png" alt="UTJA" height="40px">
+                  <span class="logo-text">UTJA</span>
+          </div>
+          <a href="./" class="language">
+              <img class="globe" src="images/navbar_icons/globe.png" alt="globe">
+              <p>English</p>
+          </a>
+          </nav>
+        </header>
         <section class="header-hero">
-            <div class="navbar">
-                <div class="logo">
-                        <img src="images/logo.png" alt="UTJA" height="70px">
-                        <span class="logo-text">UTJA</span>
-                </div>
-                <a href="./" class="language">
-                    English
-                </a>
-            </div>
-            <div class="hero-content">
-                <div class="hero-container">
-                    <h1 class="hero-title-1">トロント大学<span class="hero-title-2">日本協会</span></h1>
-                    <p class="hero-description">日本文化を通じて橋を架けることに焦点を当てた学生組織。</p>
-                </div>
-            </div>
+          <div class="hero-container">
+            <h2 class="hero-title-1">トロント大学 <span class="hero-title-2">日本文化部</span></h2>
+            <h5 class="hero-description">日本語と文化の世界を探求し、言語愛好者のための魅力的な言語交流とエキサイティングなイベントを通じて開放しましょう。</h5>
+            <a href="#next-section" class="learn-more-button">もっと詳しく</a>
+          </div>
         </section>
         <!-- End Header Hero Section-->
         <!-- Content Section-->
         <main>
-            <section class="content">
-                <div class="content-text">
-                        <h1>
-                            <strong>UTJAとは？</strong>
-                        </h1>
-                        <p>
-                            トロント大学日本協会（UTJA）は、文化交流と言語学習を促進する活発なクラブです。週ごとの言語交換セッションを通じて、学生が日本語スキルを向上させ、他の言語愛好家と有意義なつながりを築くための歓迎の場を提供しています。さらに、当クラブは年間を通じてさまざまな魅力的なイベントを主催し、トロント大学コミュニティ内での日本文化の理解と評価を促進しています。
-                        </p>
+            <section id="next-section" class="content">
+                    <div class="about-content">
+                        <img class="about-image" src="images/UTJA_Fukuoka.jpg" alt="UTJAの画像">
+                        <div class="about-text">
+                            <h3 class="about-h">日本文化を体験し、UTJAとの持続的なつながりを築きましょう。</h3>
+                            <h5 class="about-p">
+                                トロント大学ジャパン協会は、多彩なイベントを通じて文化交流と言語学習を促進する活気のあるクラブです。毎週金曜日、17:00から19:00に開催される週次の言語交流は、日本語と文化の美しさに浸るための入り口です。
+                            </h5>
+                            <div class="about-sign-up">
+                                <a class="action-button" href="/">サインアップ</a>
+                                <p>次回の言語交流に参加しましょう！</p>
+                            </div>
+                        </div>
                     </div>
             </section>
             <section class="events">
-                <h1>当協会のイベント</h1>
+              <h3>私たちのイベント</h3>
+              <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <div class="carousel">
+                  <img src="images/events/halloween.png" alt="画像" draggable="false">
+                  <img src="images/events/FukuokaEvent.png" alt="画像" draggable="false">
+                  <img src="images/events/LE4.png" alt="画像" draggable="false">
+                  <img src="images/events/LE3.png" alt="画像" draggable="false">
+                  <img src="images/events/LE2.png" alt="画像" draggable="false">
+                  <img src="images/events/LE1.png" alt="画像" draggable="false">
+                </div>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+              </div>
             </section>
         </main>
         <!-- End Content Section-->
@@ -57,7 +78,7 @@
                                 <a href="https://www.instagram.com/uoftjapanassociation/">
                                     <img src="images/social_icons/icons8-instagram.svg" alt="Instagram" width="32px">
                                 </a>
-                                <a href="https://discord.gg/RkYyKnRQm9/">
+                                <a href="">
                                     <img src="images/social_icons/icons8-discord.svg" alt="Discord" width="32px">
                                 </a>
                             </li>

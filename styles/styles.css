@@ -1,10 +1,10 @@
-@import url(carousel.css);
+@import url(slider.css);
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Rubik:wght@400;700&display=swap');
 
 @font-face {
-    font-family: 'Aqum';
-    src: 'fonts/aqum.ttf';
+    font-family: "Aqum";
+    src: url("../fonts/Aqum.ttf") format(".ttf");
 }
 
 :root {
@@ -14,47 +14,64 @@
     --dark: #000000;
     --indent: 16rem;
     --mid-gut: 8rem;
-    --cont-size: 50%;
+    --hide-photo: block;
 
-    --s0: 1rem;
-    --s1: 1.414rem;
-    --s2: 2.625rem;
-    --s3: 4.25rem;
-    --s4: 6.875rem;
-    --s6: 11.063rem;
-    --s7: 17.983rem;
+    --side-margin: 16px;
+    --gutter: 32px;
+    --col: 74px;
 }
 
+html {font-size: 100%;} /*16px*/
+
 body {
-    margin: 0;
-    min-height: 100%;
-    background-color: #fff;
-    position: relative;
-    font-family: Rubik, Noto Sans JP, sans-serif;
-    color: var(--dark);
-    font-size: var(--s0);
-    line-height: 160%;
-    font-weight: 400;
+  font-family: 'Rubik', 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 100%;
+  background-color: #fff;
+  position: relative;
+  color: var(--dark);
+  font-size: var(--s0);
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
 }
 
 h1 {
-    font-size: var(--s3);
+  margin-top: 0;
+  font-size: 7.594rem;
+  line-height: 1;
 }
 
-.header-hero {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/hero_background.jpg);
-    background-position: center center;
-    background-size: auto, cover;
-    text-align: left;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
+h2 {font-size: 5.063rem;
+    line-height: 1;
 }
+
+h3 {font-size: 3.375rem;
+    line-height: 1;
+}
+
+h4 {font-size: 2.25rem;
+    line-height: 1.25;
+}
+
+h5 {font-size: 1.5rem;
+    line-height: 1.25;
+}
+
+small, .text_small {font-size: 0.667rem;}
 
 header {
     z-index: 20;
     position: fixed;
     display: flex;
+    justify-content: center;
     width: 100%;
     height: 4rem;
     transition: background-color 0.15s ease-in-out, border-bottom 0.15s ease-in-out;
@@ -71,21 +88,23 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    max-width: 1240px;
     width: 100%;
-    margin: 0  var(--indent) 0 var(--indent);
+    margin: 0  var(--side-margin) 0 var(--side-margin);
 }
 
 .logo {
     z-index: 30;
     display: flex;
     align-items: center;
+    width: 180px;
 }
 
 .logo-text {
     z-index: 30;
     padding-left: 1rem;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     color: #fff;
     font-family: Aqum;
 }
@@ -95,7 +114,6 @@ nav {
     flex-direction: row;
     align-items: center;
     color: white;
-    font-size: var(--s0);
     text-decoration: none;
     font-weight: 400;
     transition: background-color 0.2s ease;
@@ -104,50 +122,55 @@ nav {
     border-radius: 25px;
 }
 
+.language p{
+    margin: 0 0 0 0;
+}
+
 .language:hover{
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 .globe{
-    height: 1.414rem;
+    height: 1.5rem;
 }
 
-.hero-content {
-    z-index: 10;
+.header-hero {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/hero_background.jpg);
+    background-position: center center;
+    background-size: auto, cover;
+    text-align: left;
+    height: 70vh;
     display: flex;
-    height: 100%;
-    padding: 4rem var(--indent) 2rem var(--indent);
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-    align-content: flex-start;
+    align-items: center;
+    padding-top: 4rem;
 }
 
 .hero-container {
-    width: var(--cont-size);
-    height: 60%;
+    max-width: 1240px;
+    margin: 0 var(--side-margin) 0 var(--side-margin);
+    width: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .hero-title-1 {
     margin: 0 0 0 0;
-    font-size: var(--s3);
-    line-height: 1.2;
     font-weight: 700;
     color: #fff;
 }
 
 .hero-title-2 {
+    font-family: 'Rubik', 'sans-serif';
     color: var(--action);
     display: block;
 }
 
 .hero-description {
+    max-width: 850px;
     color: #fff;
-    font-size: var(--s1);
     line-height: 160%;
     margin: 0;
 }
@@ -166,54 +189,49 @@ nav {
 }
 
 .learn-more-button:hover {
-    background-color: #b1647c; /* Change to a darker shade or hover color */
+    background-color: #b1647c;
 }
 
 section.content {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 75vh;
-    padding: 0 var(--indent) 0 var(--indent);
 }
 
 .about-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1240px;
+    margin: 0 var(--side-margin) 0 var(--side-margin);
     width: 100%;
-    height: 80%;
+    height: 392px; /* Add this line */
+
 }
 
 .about-image {
-    height: 70%;
-    width: 70%;
+    height: 392px;
+    width: 392px;
     border-radius: 20px;
 }
 
 .about-text {
-    margin-left: var(--mid-gut);
-    height: 70%;
+    height: 100%;
+    width: 708px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-.about-h {
-    font-size: var(--s2);
-    line-height: var(--s2);
+.about-h, .about-p {
     margin: 0;
 }
 
-.about-p {
-    margin-bottom: 0;
-    font-size: var(--s1);
-    line-height: 1.75rem;
-}
-
 .about-sign-up {
-    font-size: var(--s0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .action-button {
@@ -240,8 +258,9 @@ section.content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: var(--bg2);
+    padding: 0 var(--side-margin) 0 var(--side-margin);
 }
 
 section.footer {
@@ -278,115 +297,188 @@ section.footer {
     opacity: 1;
 }
 
-@media (min-width: 1920px) {
-    /* CSS styles for large laptops and desktops */
-    :root{
-        --indent: 16rem;
-        --mid-gut: 8rem;
-        --cont-size: 45rem;
-        
-        --s0: 1rem;
-        --s1: 1.414rem;
-        --s2: 2.625rem;
-        --s3: 4.25rem;
-        --s4: 6.875rem;
-        --s6: 11.063rem;
-        --s7: 17.983rem;
-    }
-  }  
-
-  @media (min-width: 1200px) and (max-width: 1919px) {
-    /* CSS styles for regular laptops and desktops */
-    :root{
-        --indent: 8rem;
-        --mid-gut: 4rem;
-        --cont-size: 45rem;
-
-        --s0: 1rem;
-        --s1: 1.414rem;
-        --s2: 2.625rem;
-        --s3: 4.25rem;
-        --s4: 6.875rem;
-        --s6: 11.063rem;
-        --s7: 17.983rem;
-    }
-  }
-
-  @media (min-width: 992px) and (max-width: 1199px) {
-    /* CSS styles for small laptops and desktops */
-    :root{
-        --indent: 4rem;
-        --mid-gut: 2rem;
-        --cont-size: 45rem;
-
-        --s0: 1rem;
-        --s1: 1.414rem;
-        --s2: 2.625rem;
-        --s3: 4.25rem;
-        --s4: 6.875rem;
-        --s6: 11.063rem;
-        --s7: 17.983rem;
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 769px) and (max-width: 1024px) {
     /* CSS styles for tablets */
     :root{
-        --indent: 2rem;
-        --cont-size: 45rem;
-        --mid-gut: 1rem;
-
-        --s0: 1rem;
-        --s1: 1rem;
-        --s2: 1.414rem;
-        --s3: 2.625rem;
-        --s4: 4.25rem;
-        --s6: 6.875rem;
-        --s7: 11.063rem;
-
+        --action: #f289a8;
+        --bg1: #fff;
+        --bg2: #fbfcfb;
+        --dark: #000000;
+    
+        --side-margin: 16px;
+        --gutter: 16px;
+        --col: 100%;
     }
+
+    h1 {
+        margin-top: 0;
+        font-size: 7.594rem;
+        line-height: 1;
+      }
+      
+      h2 {font-size: 5.063rem;
+          line-height: 1;
+      }
+      
+      h3 {font-size: 3.375rem;
+          line-height: 1;
+      }
+      
+      h4 {font-size: 2.25rem;
+          line-height: 1.25;
+      }
+      
+      h5 {font-size: 1.5rem;
+          line-height: 1.25;
+      }
+
+      .hero-container {
+        height: 85%;
+      }
+
+      .about-content{
+        margin: 0;
+        padding: 0 var(--side-margin) 0 var(--side-margin);
+      }
+
+      .about-image {
+        display: None;
+      }
+
+      .action-button {
+        margin: 0 0 8px 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      .about-sign-up {
+        flex-direction: column;
+      }
   }
 
-  @media (min-width: 576px) and (max-width: 767px) {
-    /* CSS styles for mobile phones in landscape mode */
+
+@media (min-width: 480px) and (max-width: 768px) {
+    /* CSS styles for tablets */
     :root{
-        --indent: 2rem;
-        --cont-size: 34rem;
-        --mid-gut: 1rem;
-
-        --s0: 1rem;
-        --s1: 1rem;
-        --s2: 1.414rem;
-        --s3: 2.625rem;
-        --s4: 4.25rem;
-        --s6: 6.875rem;
-        --s7: 11.063rem;
-
+        --action: #f289a8;
+        --bg1: #fff;
+        --bg2: #fbfcfb;
+        --dark: #000000;
+    
+        --side-margin: 16px;
+        --gutter: 16px;
+        --col: 100%;
     }
+
+    h1 {
+        margin-top: 0;
+        font-size: 7.594rem;
+        line-height: 1;
+      }
+      
+      h2 {font-size: 5.063rem;
+          line-height: 1;
+      }
+      
+      h3 {font-size: 3.375rem;
+          line-height: 1;
+      }
+      
+      h4 {font-size: 2.25rem;
+          line-height: 1.25;
+      }
+      
+      h5 {font-size: 1.5rem;
+          line-height: 1.25;
+      }
+
+      .hero-container {
+        height: 85%;
+      }
+
+      .about-content{
+        margin: 0;
+        padding: 0 var(--side-margin) 0 var(--side-margin);
+      }
+
+      .about-image {
+        display: None;
+      }
+
+      .action-button {
+        margin: 0 0 8px 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      .about-sign-up {
+        flex-direction: column;
+      }
   }
-  
-  @media (max-width: 575px) {
-    /* CSS styles for mobile phones in portrait mode */
+
+  @media (min-width: 360px) and (max-width: 479px) {
+    /* CSS styles for mobile */
     :root{
-        --indent: 0;
-        --cont-size: 100%;
-        --mid-gut: 0rem;
-
-        --s0: 1rem;
-        --s1: 1rem;
-        --s2: 1.414rem;
-        --s3: 2.625rem;
-        --s4: 4.25rem;
-        --s6: 6.875rem;
-        --s7: 11.063rem;
-
+        --action: #f289a8;
+        --bg1: #fff;
+        --bg2: #fbfcfb;
+        --dark: #000000;
+    
+        --side-margin: 16px;
+        --gutter: 16px;
+        --col: 100%;
     }
 
-    .cta-button {
-        padding: 0.625rem 1rem; /* 10px and 16px converted to rem */
-    }
+    h1 {
+        margin-top: 0;
+        font-size: 5.063rem;
+        line-height: 1;
+      }
+      
+      h2 {font-size: 2.25rem;
+          line-height: 1;
+      }
+      
+      h3 {font-size: 1.5rem;
+          line-height: 1.25;
+      }
+      
+      h4 {font-size: 1.5rem;
+          line-height: 1.25;
+      }
+      
+      h5 {font-size: 1rem;
+          line-height: 1.25;
+      }
 
-    .footer-nav li {
-        display: block;
-    }
+      .hero-container {
+        height: 85%;
+      }
+
+      .about-content{
+        margin: 0;
+        padding: 0 var(--side-margin) 0 var(--side-margin);
+      }
+
+      .about-image {
+        display: None;
+      }
+
+      .action-button {
+        margin: 0 0 8px 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      .about-sign-up {
+        flex-direction: column;
+      }
   }
+
+.cta-button {
+    padding: 0.625rem 1rem; /* 10px and 16px converted to rem */
+}
+
+.footer-nav li {
+    display: block;
+}
