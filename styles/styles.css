@@ -233,8 +233,13 @@ section.content {
     justify-content: space-between;
 }
 
-.about-h, .about-p {
+.about-h{
     margin: 0;
+}
+
+.about-p {
+    margin: 0;
+    font-weight: 400;
 }
 
 .about-sign-up {
@@ -307,7 +312,7 @@ section.footer {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    /* CSS styles for tablets */
+    /* CSS styles for small laptops */
     :root{
         --action: #f289a8;
         --bg1: #fff;
@@ -343,6 +348,12 @@ section.footer {
 
       .hero-container {
         height: 85%;
+      }
+
+      .learn-more-button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
       }
 
       .about-content{
@@ -405,6 +416,12 @@ section.footer {
         height: 85%;
       }
 
+      .learn-more-button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
       .about-content{
         margin: 0;
         padding: 0 var(--side-margin) 0 var(--side-margin);
@@ -462,6 +479,12 @@ section.footer {
 
       .hero-container {
         height: 85%;
+      }
+
+      .learn-more-button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
       }
 
       .about-content{
