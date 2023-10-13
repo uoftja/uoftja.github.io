@@ -10,7 +10,7 @@
 .wrapper{
   display: flex;
   width: 100%;
-  max-width: 1028px;
+  max-width: 1248px;
   position: relative;
 }
 .wrapper i{
@@ -59,18 +59,18 @@
   object-fit: cover;
   user-select: none;
   margin-left: 32px;
-  width: calc(100% / 3);
+  width: calc(1184px / 3);
 }
 .carousel img:first-child{
   margin-left: 0px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1279px) {
     .wrapper {
-        width: 95%;
+        width: 90%;
         }
   .carousel img{
-    width: calc(100% / 2);
+    width: calc((100% - 64px) / 2);
   }
 }
 
@@ -79,6 +79,6 @@
     width: 90%;
     }
   .carousel img{
-    width: 100%;
+    width: calc(100%);
   }
 }
