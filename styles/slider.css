@@ -70,7 +70,7 @@
         width: 90%;
         }
   .carousel img{
-    width: calc((100% - 64px) / 2);
+    width: calc((100% - 32px) / 2);
   }
 }
 
