@@ -1,13 +1,6 @@
 @import url(slider.css);
 
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Rubik:wght@400;500;600;700&display=swap'); */
-
-@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700&family=Rubik:wght@400;500;600;700&display=swap');
-
-@font-face {
-    font-family: "Aqum";
-    src: url("../fonts/Aqum.ttf") format(".ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Rubik:wght@400;500;600;700&display=swap');
 
 :root {
     --action: #f289a8;
@@ -48,19 +41,19 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   margin-top: 0;
-  font-size: 7.594rem;
+  font-size: 4rem;
   line-height: 1;
 }
 
-h2 {font-size: 5.063rem;
+h2 {font-size: 3em;
     line-height: 1;
 }
 
-h3 {font-size: 3.375rem;
+h3 {font-size: 2.5rem;
     line-height: 1;
 }
 
-h4 {font-size: 2.25rem;
+h4 {font-size: 2rem;
     line-height: 1.25;
 }
 
@@ -73,15 +66,13 @@ p {
     font-weight: 400;
 }
 
-small, .text_small {font-size: 0.667rem;}
-
 header {
     z-index: 20;
     position: fixed;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 4.5rem;
+    height: 4rem;
     transition: background-color 0.15s ease-in-out, border-bottom 0.15s ease-in-out;
     border-bottom: 1px solid transparent;
 }
@@ -105,16 +96,6 @@ nav {
     z-index: 30;
     display: flex;
     align-items: center;
-    width: 180px;
-}
-
-.logo-text {
-    z-index: 30;
-    padding-left: 1rem;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #fff;
-    font-family: Aqum;
 }
 
 .language {
@@ -147,7 +128,7 @@ nav {
     background-position: center center;
     background-size: auto, cover;
     text-align: left;
-    height: 75vh;
+    height: clamp(720px, 75vh, 80vh);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,15 +138,18 @@ nav {
 .hero-container {
     max-width: 1240px;
     margin: 0 var(--side-margin) 0 var(--side-margin);
-    width: 100%;
-    height: 50%;
+    width: 1240px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+.hero-text {
+  width: clamp(300px, 100%, 800px);
+}
+
 .hero-title-1 {
-    margin: 0 0 0 0;
+    margin: 0 0 2rem 0;
     font-weight: 600;
     color: #fff;
 }
@@ -186,12 +170,13 @@ nav {
 .learn-more-button {
     display: inline-block;
     width: fit-content;
+    margin-top: 2rem;
     padding: 10px 20px;
     font-size: var(--s0);
-    background-color: var(--action); /* Change to your desired button color */
+    background-color: var(--action);
     color: #fff;
     border: none;
-    border-radius: 50px; /* Creates circular edges */
+    border-radius: 50px;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
@@ -204,10 +189,8 @@ section.content {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1113%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c189 C 96%2c227.8 288%2c371.6 480%2c383 C 672%2c394.4 768%2c227 960%2c246 C 1152%2c265 1344%2c431.6 1440%2c478L1440 560L0 560z' fill='rgba(233%2c 236%2c 239%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1113'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
-    background-position: center center;
-    background-size: cover;
-    height: 75vh;
+    height: clamp(500px, 75vh, 720px);
+    
 }
 
 .about-content {
@@ -217,7 +200,7 @@ section.content {
     max-width: 1240px;
     margin: 0 var(--side-margin) 0 var(--side-margin);
     width: 100%;
-    height: 392px; /* Add this line */
+    height: 392px;
 
 }
 
@@ -270,7 +253,7 @@ section.content {
 }
 
 .events {
-    height: 80vh;
+    height: clamp(600px, 80vh, 800px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -347,20 +330,79 @@ li{
 	background-color: rgba(255,255,255,0.1);
 }
 
-@media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 32px;
-}
-}
-@media(max-width: 574px){
-  .footer-col{
-    width: 100%;
-}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  /* CSS styles for small laptops */
+  :root{
+      --action: #f289a8;
+      --bg1: #fff;
+      --bg2: #F8F9FA;
+      --dark: #000000;
+  
+      --side-margin: 48px;
+      --gutter: 16px;
+      --col: 100%;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: 4rem;
+    line-height: 1;
+  }
+  
+  h2 {font-size: 3em;
+      line-height: 1;
+  }
+  
+  h3 {font-size: 2.5rem;
+      line-height: 1;
+  }
+  
+  h4 {font-size: 2rem;
+      line-height: 1.25;
+  }
+  
+  h5 {font-size: 1.5rem;
+      line-height: 1.25;
+  }
+
+    .about-content{
+      margin: 0;
+      padding: 0 var(--side-margin) 0 var(--side-margin);
+    }
+
+    .about-content{
+      margin: 0;
+      padding: 0 var(--side-margin) 0 var(--side-margin);
+      justify-content: space-around;
+      height: 600px;
+    }
+
+    .about-text {
+      height: auto;
+      width: 498px;
+    }
+
+    .about-image {
+      height: 376px;
+      width: 376px;
+    }
+
+    .about-p {
+      margin: 1.5rem 0 1.5rem 0;
+    }
+
+    .action-button {
+      margin: 0 0 0.5rem 0;
+      text-align: center;
+    }
+
+    .about-sign-up {
+      flex-direction: column;
+    }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    /* CSS styles for small laptops */
+@media (min-width: 769px) and (max-width: 1023px) {
+    /* CSS styles for large tablets */
     :root{
         --action: #f289a8;
         --bg1: #fff;
@@ -373,30 +415,26 @@ li{
     }
 
     h1 {
-        margin-top: 0;
-        font-size: 7.594rem;
+      margin-top: 0;
+      font-size: 4rem;
+      line-height: 1;
+    }
+    
+    h2 {font-size: 3em;
         line-height: 1;
-      }
-      
-      h2 {font-size: 5.063rem;
-          line-height: 1;
-      }
-      
-      h3 {font-size: 3.375rem;
-          line-height: 1;
-      }
-      
-      h4 {font-size: 2.25rem;
-          line-height: 1.25;
-      }
-      
-      h5 {font-size: 1.5rem;
-          line-height: 1.25;
-      }
-
-      .hero-container {
-        height: 85%;
-      }
+    }
+    
+    h3 {font-size: 2.5rem;
+        line-height: 1;
+    }
+    
+    h4 {font-size: 2rem;
+        line-height: 1.25;
+    }
+    
+    h5 {font-size: 1.5rem;
+        line-height: 1.25;
+    }
 
       .learn-more-button {
         display: flex;
@@ -404,13 +442,24 @@ li{
         width: 100%;
       }
 
+      section.content{
+        height: clamp(840px, 75vh, 1000px);
+      }
+
       .about-content{
         margin: 0;
         padding: 0 var(--side-margin) 0 var(--side-margin);
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: 800px;
       }
 
-      .about-image {
-        display: None;
+      .about-text {
+        height: auto;
+      }
+
+      .about-p {
+        margin: 1.5rem 0 1.5rem 0;
       }
 
       .action-button {
@@ -425,7 +474,7 @@ li{
   }
 
 @media (min-width: 480px) and (max-width: 768px) {
-    /* CSS styles for tablets */
+    /* CSS styles for small tablets */
     :root{
         --action: #f289a8;
         --bg1: #fff;
@@ -438,30 +487,26 @@ li{
     }
 
     h1 {
-        margin-top: 0;
-        font-size: 7.594rem;
+      margin-top: 0;
+      font-size: 3.5rem;
+      line-height: 1;
+    }
+    
+    h2 {font-size: 3em;
         line-height: 1;
-      }
-      
-      h2 {font-size: 3.375rem;
-          line-height: 1;
-      }
-      
-      h3 {font-size: 2.25rem;
-          line-height: 1;
-      }
-      
-      h4 {font-size: 1.5rem;
-          line-height: 1.25;
-      }
-      
-      h5 {font-size: 1rem;
-          line-height: 1.25;
-      }
-
-      .hero-container {
-        height: 85%;
-      }
+    }
+    
+    h3 {font-size: 2.5rem;
+        line-height: 1;
+    }
+    
+    h4 {font-size: 2rem;
+        line-height: 1.25;
+    }
+    
+    h5 {font-size: 1.5rem;
+        line-height: 1.25;
+    }
 
       .learn-more-button {
         display: flex;
@@ -469,13 +514,25 @@ li{
         width: 100%;
       }
 
+      section.content{
+        height: clamp(840px, 75vh, 1000px);
+      }
+
       .about-content{
         margin: 0;
         padding: 0 var(--side-margin) 0 var(--side-margin);
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: 800px;
       }
 
-      .about-image {
-        display: None;
+      .about-text {
+        height: auto;
+        width: 100%;
+      }
+
+      .about-p {
+        margin: 1.5rem 0 1.5rem 0;
       }
 
       .action-button {
@@ -487,6 +544,11 @@ li{
       .about-sign-up {
         flex-direction: column;
       }
+
+      .footer-col{
+        width: 50%;
+        margin-bottom: 32px;
+    }
   }
 
 @media (min-width: 320px) and (max-width: 479px) {
@@ -503,30 +565,26 @@ li{
     }
 
     h1 {
-        margin-top: 0;
-        font-size: 5.063rem;
+      margin-top: 0;
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+    
+    h2 {font-size: 2.5em;
         line-height: 1;
-      }
-      
-      h2 {font-size: 3.375rem;
-          line-height: 1;
-      }
-      
-      h3 {font-size: 1.5rem;
-          line-height: 1.25;
-      }
-      
-      h4 {font-size: 1.5rem;
-          line-height: 1.25;
-      }
-      
-      h5 {font-size: 1rem;
-          line-height: 1.25;
-      }
-
-      .hero-container {
-        height: 85%;
-      }
+    }
+    
+    h3 {font-size: 2rem;
+        line-height: 1;
+    }
+    
+    h4 {font-size: 1.5rem;
+        line-height: 1.25;
+    }
+    
+    h5 {font-size: 1rem;
+        line-height: 1.25;
+    }
 
       .learn-more-button {
         display: flex;
@@ -537,10 +595,23 @@ li{
       .about-content{
         margin: 0;
         padding: 0 var(--side-margin) 0 var(--side-margin);
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: 100%;
+      }
+
+      .about-text {
+        height: auto;
+        width: 100%;
       }
 
       .about-image {
-        display: None;
+        width: 80%;
+        height: auto;
+      }
+
+      .about-p {
+        margin: 1.5rem 0 1.5rem 0;
       }
 
       .action-button {
@@ -552,6 +623,9 @@ li{
       .about-sign-up {
         flex-direction: column;
       }
+
+      .footer-col{
+        width: 100%;
   }
 
 @media (max-width: 319px) {
@@ -621,95 +695,9 @@ li{
       .about-sign-up {
         flex-direction: column;
       }
-  }
 
-  @media (max-height: 700px) and (orientation: landscape){
-    /* CSS styles for landscape */
-    :root{
-        --action: #f289a8;
-        --bg1: #fff;
-        --bg2: #fbfcfb;
-        --dark: #000000;
-    
-        --side-margin: 16px;
-        --gutter: 16px;
-        --col: 100%;
+      .footer-col{
+        width: 100%;
+      }
     }
-
-    h1 {
-        margin-top: 0;
-        font-size: 3.375rem;
-        line-height: 1;
-      }
-      
-      h2 {font-size: 3.375rem;
-          line-height: 1;
-      }
-      
-      h3 {font-size: 2.25rem;
-          line-height: 1;
-      }
-      
-      h4 {font-size: 1.5rem;
-          line-height: 1.25;
-      }
-      
-      h5 {font-size: 1.5rem;
-          line-height: 1.25;
-      }
-
-      .header-hero {
-        height: 360px;
-      }
-
-      .hero-container {
-        height: 85%;
-      }
-
-      .learn-more-button {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-      }
-
-      section.content {
-        height: 400px;
-      }
-
-      .about-content{
-        height: 360px;
-        margin: 0;
-        padding: 0 var(--side-margin) 0 var(--side-margin);
-      }
-
-      .about-image {
-        display: None;
-      }
-
-      .about-text {
-        width: 100%;
-      }
-
-      .action-button {
-        margin: 0 0 8px 0;
-        text-align: center;
-        width: 100%;
-      }
-
-      .about-sign-up {
-        flex-direction: column;
-      }
-
-      .events {
-        height: 480px;
-      }
   }
-
-
-.cta-button {
-    padding: 0.625rem 1rem; /* 10px and 16px converted to rem */
-}
-
-.footer-nav li {
-    display: block;
-}
