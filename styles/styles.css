@@ -592,6 +592,10 @@ li{
         width: 100%;
       }
 
+      section.content{
+        height: clamp(840px, 75vh, 1000px);
+      }
+
       .about-content{
         margin: 0;
         padding: 0 var(--side-margin) 0 var(--side-margin);
@@ -675,6 +679,10 @@ li{
         display: flex;
         justify-content: center;
         width: 100%;
+      }
+
+      section.content{
+        height: clamp(840px, 75vh, 1000px);
       }
 
       .about-content{
