@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Rubik:wght@400;500;600;700&display=swap');
+
+:root {
+    --action: #f289a8;
+    --bg1: #fff;
+    --bg2: #E9ECEF;
+    --bg3: #D1D4D7;
+    --dark: #000000;
+    --indent: 16rem;
+    --mid-gut: 8rem;
+    --hide-photo: block;
+
+    --side-margin: 1rem;
+    --gutter: 1rem;
+  }
+
+  body {
+    font-family: 'Rubik', 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 100%;
+    background-color: #fff;
+    position: relative;
+    color: var(--dark);
+    font-size: var(--s0);
+    min-height: 100vh;
+    max-width: 100vw;
+  }
+
+  h1, h2, h3, h4, h5 {
+    margin: 0;
+    font-weight: 700;
+  }
+  
+  h1 {
+    margin-top: 0;
+    font-size: 4rem;
+    line-height: 1;
+  }
+  
+  h2 {font-size: 3em;
+      line-height: 1;
+  }
+  
+  h3 {font-size: 2.5rem;
+      line-height: 1;
+  }
+  
+  h4 {font-size: 2rem;
+      line-height: 1.25;
+  }
+  
+  h5 {font-size: 1.5rem;
+      line-height: 1.25;
+  }
+  
+  p {
+      margin: 0;
+      font-weight: 400;
+  }
+  
+  nav{
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.15s ease-in-out, border-bottom 0.15s ease-in-out;
+    border-bottom: 1px solid #333;
+   }
+  
+   nav .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0  var(--side-margin) 0 var(--side-margin);
+    background: #000;
+   }
+  
+   nav .navbar .menu{
+     display: flex;
+     align-items: center;
+   }
+   .navbar .menu li{
+     list-style: none;
+     margin: 0 1rem;
+   }
+   .navbar .menu li a{
+     color: #fff;
+     font-size: 1rem;
+     font-weight: 500;
+     text-decoration: none;
+   }
+   
+.logo-cont{
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-text{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .logo {
+    z-index: 30;
+    
+    justify-self: center;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
+  }
+  
