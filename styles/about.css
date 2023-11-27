@@ -262,13 +262,13 @@
   grid-column-gap: 1rem;
   row-gap: 4rem;
   margin: 4rem 0;
+  justify-content: center;
 }
 
 .card {
   display: grid;
   place-items: center;
   width: 100%;
-  grid-column: span 3;
   max-width: 21.875rem;
   height: 28.125rem;
   overflow: hidden;
@@ -462,4 +462,29 @@ li{
 .footer-col .social-links a:hover{
 	color: #fff;
 	background-color: rgba(255,255,255,0.1);
+}
+
+.card.masayo, .card.yifan, .card.kate, .card.jacob, .card.nanami, .card.ian, .card.miri {
+  grid-column: 2 / span 4;
+}
+
+.card.kento, .card.abby, .card.haruta, .card.robin, .card.delia, .card.hina, .card.atlas {
+  grid-column: 8 / span 4;
+}
+
+@media (min-width: 761px) and (max-width: 1023px) {
+  .card.masayo, .card.yifan, .card.kate, .card.jacob, .card.nanami, .card.ian, .card.miri {
+    grid-column: 1 / span 6;
+  }
+  
+  .card.kento, .card.abby, .card.haruta, .card.robin, .card.delia, .card.hina, .card.atlas {
+    grid-column: 7 / span 6;
+  }
+}
+
+@media (max-width: 760px) {
+  .card.masayo, .card.yifan, .card.kate, .card.jacob, .card.nanami, .card.ian, .card.miri,
+  .card.kento, .card.abby, .card.haruta, .card.robin, .card.delia, .card.hina, .card.atlas {
+    grid-column: span 12;
+  }
 }
