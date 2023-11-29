@@ -3,7 +3,7 @@
 :root {
     --action: #f289a8;
     --bg1: #fff;
-    --bg2: #E9ECEF;
+    --bg2: #f9fafb;
     --bg3: #D1D4D7;
     --dark: #000000;
     --indent: 16rem;
@@ -145,7 +145,7 @@
   .about-img{
     grid-column: span 6;
     width: 100%;
-    height: 22.5rem;
+    height: 21rem;
     object-fit: cover;
     border-radius: 2rem;
   }
@@ -159,8 +159,13 @@
     justify-content: space-evenly;
   }
 
+  .about-text p{
+    font-weight: 400;
+    line-height: 1.66rem;
+  }
+
   .stat-cont {
-    margin: 4rem 0;
+    margin-top: 4rem;
     background-color: var(--action);
     width: 100%;
     display: flex;
@@ -191,10 +196,12 @@
   }
 
   .exec {
+    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(249 250 251);
   }
 
   .exec-photos {
@@ -266,6 +273,7 @@
   row-gap: 4rem;
   margin: 4rem 1rem;
   justify-items: center;
+  z-index: 100;
 }
 
 .card {
@@ -440,6 +448,10 @@ li{
 }
 
 @media (max-width: 760px) {
+
+  h1 {
+    font-size:3rem;
+  }
 
   .about-img {
     grid-column: span 12;
