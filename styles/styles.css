@@ -279,10 +279,39 @@ section.content {
     padding: 0 var(--side-margin) 0 var(--side-margin);
 }
 
-.container{
-	width: 1240px;
-	margin: 0 var(--side-margin) 0 var(--side-margin);
+.event-container {
+  height: 10rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: var(--gutter);
+  row-gap: 2rem;
 }
+
+.event {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: var(--gutter);
+}
+
+.event-picture {
+  grid-column: span 2;
+  height: 100%;
+  width: 100%;
+}
+
+.event-name {
+  grid-column: 3 / span 2;
+}
+
+.event-information {
+  grid-column: 5 / span 5;
+}
+
+.event.button{
+  grid-column: 10 / span 2;
+}
+
 .row{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
