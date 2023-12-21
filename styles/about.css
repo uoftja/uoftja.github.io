@@ -393,7 +393,4 @@ nav {
     font-size: 0.75rem;
   }
 
-  .footer-col{
-    grid-column: span 12;
-}
 }
