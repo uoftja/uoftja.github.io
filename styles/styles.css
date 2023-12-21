@@ -749,6 +749,10 @@ section.content {
     grid-column: span 12;
   }
 
+  .hero-description{
+    font-size: 1rem;
+  }
+
   .learn-more-button {
     grid-column: span 12;
     display: flex;
