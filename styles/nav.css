@@ -1,5 +1,5 @@
 :root{
-    --content-size: 1408x;
+    --content-size: 1408px;
 }
 
 @media (max-width: 1440px) {
