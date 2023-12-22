@@ -536,6 +536,7 @@ section.content {
     display: flex;
     justify-content: center;
     width: 100%;
+    padding: 10px 0;
   }
 
   section.content{
@@ -569,6 +570,8 @@ section.content {
     margin: 0 0 8px 0;
     text-align: center;
     width: 100%;
+    padding: 10px 0;
+
   }
 
   .about-sign-up {
@@ -636,6 +639,8 @@ section.content {
     display: flex;
     justify-content: center;
     width: 100%;
+    padding: 10px 0;
+
   }
 
   section.content{
@@ -669,6 +674,7 @@ section.content {
     margin: 0 0 8px 0;
     text-align: center;
     width: 100%;
+    padding: 10px 0;
   }
 
   .about-sign-up {
