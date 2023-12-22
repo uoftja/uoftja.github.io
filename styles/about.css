@@ -64,6 +64,10 @@
       font-weight: 400;
   }
   
+  a{
+    text-decoration: none;
+  }
+
 nav {
   position: static;
   background: #000;
@@ -316,6 +320,10 @@ nav {
 }
 
 @media (min-width: 761px) and (max-width: 1023px) {
+  .about-body{
+    grid-column-gap: 1rem;
+  }
+
   .about-img {
     grid-column: span 12;
   }
@@ -334,6 +342,10 @@ nav {
 }
 
 @media (max-width: 760px) {
+  .about-body{
+    grid-column-gap: 1rem;
+  }
+
   .about-img {
     grid-column: span 12;
   }

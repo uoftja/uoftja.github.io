@@ -72,3 +72,15 @@ nav{
     width: 3rem;
     margin-right: 1rem;
   }
+
+  @media (min-width: 320px) and (max-width: 479px) {
+    /* CSS styles for mobile */
+    .navbar .menu li{
+      margin: 0;
+    }
+  
+    nav .navbar .menu {
+      justify-content: space-evenly;
+      width: 100%;
+    }
+  }
