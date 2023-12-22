@@ -2,6 +2,8 @@
 @import url(animation.css);
 @import url(nav.css);
 @import url(footer.css);
+@import url(events.css);
+
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Rubik:wght@400;500;600;700&display=swap');
 
@@ -205,97 +207,6 @@ section.content {
 
 .action-button:hover {
   background-color: #b1647c;
-}
-
-.events {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--bg2);
-  padding: 4rem var(--side-margin);
-}
-
-.event-header{ 
-  text-align: center;
-}
-
-.no-events-msg {
-  margin: 4rem 0rem;
-}
-
-.event-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: var(--gutter);
-  justify-content: space-between;
-  align-items: center;
-  margin: 4rem 0;
-  max-width: var(--content-size);
-  justify-content: center;
-}
-
-.horizontal-card {
-  grid-column: 4 / span 6;
-
-  .card {
-    width: 100%;
-    border-radius: 1rem;
-    background-color: #fff;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-
-    img {
-      width: 30%;
-      object-fit: contain;
-    }
-
-    .info {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 1.5rem 1rem 1.5rem 2rem; 
-      color: #000;
-
-      span {
-        font-weight: 700;
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-      }
-
-      a {
-        margin-top: 1rem;
-      }
-    }
-  }
-
-  @media (max-width: 1000px) {
-    .card {
-      width: 300px;
-      flex-direction: column;
-
-      img {
-        width: 100%;
-      }
-
-      .info {
-        padding: 2rem;
-      }
-
-    }
-  }
-}
-
-@media (max-width: 1440px){
-  .horizontal-card {
-    grid-column: 2 / span 10;
-}
-}
-
-@media (max-width: 1000px){
-  .horizontal-card {
-    grid-column: span 12;
-}
 }
 
 .button-cont{
