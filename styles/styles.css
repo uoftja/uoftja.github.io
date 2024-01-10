@@ -245,7 +245,7 @@ section.content {
 
   .card {
     width: 100%;
-    border-radius: 1rem;
+    border-radius: 0 1rem 1rem 0;
     background-color: #fff;
     overflow: hidden;
     display: flex;
@@ -279,6 +279,7 @@ section.content {
     .card {
       width: 300px;
       flex-direction: column;
+      border-radius: 0 0 1rem 1rem;
 
       img {
         width: 100%;
