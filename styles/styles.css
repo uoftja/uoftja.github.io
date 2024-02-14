@@ -292,13 +292,13 @@ section.content {
   }
 }
 
-@media (max-width: 1440px){
+@media (min-width: 1440px){
   .horizontal-card {
     grid-column: 2 / span 10;
 }
 }
 
-@media (max-width: 1000px){
+@media (min-width: 1000px){
   .horizontal-card {
     grid-column: span 12;
 }
